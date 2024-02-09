@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Valentine</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+        }
+        
+        body {
+            background-image: url("img.jpg");
+        }
+        
+        h1 {
+            color: black;
+            font-size: 60px;
+            text-align: center;
+        }
+        
+        #container {
+            background-color: rgba(177, 33, 193, 0.701);
+            width: 900px;
+            height: 300px;
+            margin-top: 20px;
+            padding: 10px;
+            display: flex;
+            flex-direction: row;
+            left: 50%;
+            transform: translate(-50%, 30%);
+            justify-content: center;
+            position: absolute;
+            border-radius: 10px;
+        }
+        
+        button {
+            position: absolute;
+            display: flex;
+            flex-direction: row;
+            cursor: pointer;
+            margin: 0 10px;
+            padding: 10px 30px;
+            border-radius: 8px;
+            align-items: center;
+        }
+        
+        .options {
+            margin-top: 400px;
+        }
+        
+        #no {
+            right: 90%;
+            background-color: rgb(192, 99, 99);
+        }
+        
+        #yes {
+            background-color: rgb(178, 204, 139);
+        }
+    </style>
+</head>
+
+<body>
+    <div id="container">
+        <h1 class="val">Will you be my valentine?</h1>
+        <img class="myImg" src="yesGif.gif" />
+        <div class="options">
+            <button id="yes">
+          <a href="message.html">Yes</a>
+        </button>
+            <button id="no">No</button>
+        </div>
+    </div>
+    <script>
+        const element = document.getElementById("no");
+        element.addEventListener("mouseover", mouseHover);
+
+        function mouseHover() {
+            const i = Math.floor(Math.random() * 500) + 1;
+            const j = Math.floor(Math.random() * 500) + 1;
+
+            element.style.left = i + "px";
+            element.style.top = j + "px";
+        }
+    </script>
+</body>
+
+</html>
